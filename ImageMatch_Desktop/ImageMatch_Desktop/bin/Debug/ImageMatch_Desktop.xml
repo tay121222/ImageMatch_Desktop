@@ -1,0 +1,56 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ImageMatch_Desktop
+</name>
+</assembly>
+<members>
+<member name="T:ImageMatch_Desktop.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:ImageMatch_Desktop.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:ImageMatch_Desktop.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:ImageMatch_Desktop.My.Resources.Resources._144_1445528_zoho_inventory_aftership_inventory_logo_png">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ImageMatch_Desktop.My.Resources.Resources.inventory_imagematch">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ImageMatch_Desktop.My.Resources.Resources.not_found">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ImageMatch_Desktop.My.Resources.Resources.pngtree_glasslookmagnifyingsearch_blue_icon_on_abstract_cloud_back_png_image_1491467">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ImageMatch_Desktop.My.Resources.Resources.search_26236">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ImageMatch_Desktop.My.Resources.Resources.upload_image_2023_04_11_023334_kxuh">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+</members>
+</doc>
