@@ -31,19 +31,19 @@ Partial Class Image_Matching
         Me.found_images = New System.Windows.Forms.Label()
         Me.find_match_worker = New System.ComponentModel.BackgroundWorker()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.match_found_list = New System.Windows.Forms.DataGridView()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.jewelry_image = New System.Windows.Forms.PictureBox()
+        Me.match_found_list = New System.Windows.Forms.DataGridView()
         Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.jewelry_image = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.match_found_list, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.match_found_list, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.jewelry_image, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -62,7 +62,7 @@ Partial Class Image_Matching
         '
         'StatusStrip1
         '
-        Me.StatusStrip1.BackColor = System.Drawing.Color.DimGray
+        Me.StatusStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 428)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(1035, 22)
@@ -120,6 +120,18 @@ Partial Class Image_Matching
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Matches Found"
         '
+        'PictureBox4
+        '
+        Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox4.Image = Global.ImageMatch_Desktop.My.Resources.Resources.loading24
+        Me.PictureBox4.Location = New System.Drawing.Point(379, 202)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(35, 33)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox4.TabIndex = 47
+        Me.PictureBox4.TabStop = False
+        Me.PictureBox4.Visible = False
+        '
         'match_found_list
         '
         Me.match_found_list.AllowUserToAddRows = False
@@ -141,29 +153,6 @@ Partial Class Image_Matching
         Me.match_found_list.RowHeadersVisible = False
         Me.match_found_list.Size = New System.Drawing.Size(781, 394)
         Me.match_found_list.TabIndex = 35
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox4.Image = Global.ImageMatch_Desktop.My.Resources.Resources.loading24
-        Me.PictureBox4.Location = New System.Drawing.Point(379, 202)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(35, 33)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox4.TabIndex = 47
-        Me.PictureBox4.TabStop = False
-        Me.PictureBox4.Visible = False
-        '
-        'jewelry_image
-        '
-        Me.jewelry_image.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.jewelry_image.Image = Global.ImageMatch_Desktop.My.Resources.Resources.upload_image_2023_04_11_023334_kxuh
-        Me.jewelry_image.Location = New System.Drawing.Point(12, 12)
-        Me.jewelry_image.Name = "jewelry_image"
-        Me.jewelry_image.Size = New System.Drawing.Size(216, 246)
-        Me.jewelry_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.jewelry_image.TabIndex = 2
-        Me.jewelry_image.TabStop = False
         '
         'DataGridViewImageColumn1
         '
@@ -205,6 +194,17 @@ Partial Class Image_Matching
         Me.Column4.ReadOnly = True
         Me.Column4.Width = 180
         '
+        'jewelry_image
+        '
+        Me.jewelry_image.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.jewelry_image.Image = Global.ImageMatch_Desktop.My.Resources.Resources.upload_image_2023_04_11_023334_kxuh
+        Me.jewelry_image.Location = New System.Drawing.Point(12, 12)
+        Me.jewelry_image.Name = "jewelry_image"
+        Me.jewelry_image.Size = New System.Drawing.Size(216, 246)
+        Me.jewelry_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.jewelry_image.TabIndex = 2
+        Me.jewelry_image.TabStop = False
+        '
         'Image_Matching
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -222,8 +222,8 @@ Partial Class Image_Matching
         Me.Text = "Image_Matching"
         Me.Panel1.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
-        CType(Me.match_found_list, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.match_found_list, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.jewelry_image, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

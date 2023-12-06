@@ -85,7 +85,7 @@ Partial Class Image_Upload_Interface
         Me.txtJewelryName.Location = New System.Drawing.Point(334, 13)
         Me.txtJewelryName.Name = "txtJewelryName"
         Me.txtJewelryName.Size = New System.Drawing.Size(258, 25)
-        Me.txtJewelryName.TabIndex = 3
+        Me.txtJewelryName.TabIndex = 1
         '
         'txtJewelryType
         '
@@ -93,7 +93,7 @@ Partial Class Image_Upload_Interface
         Me.txtJewelryType.Location = New System.Drawing.Point(334, 62)
         Me.txtJewelryType.Name = "txtJewelryType"
         Me.txtJewelryType.Size = New System.Drawing.Size(258, 25)
-        Me.txtJewelryType.TabIndex = 3
+        Me.txtJewelryType.TabIndex = 2
         '
         'txtJewelryDescription
         '
@@ -113,7 +113,7 @@ Partial Class Image_Upload_Interface
         Me.btnAddJewelry.Location = New System.Drawing.Point(334, 310)
         Me.btnAddJewelry.Name = "btnAddJewelry"
         Me.btnAddJewelry.Size = New System.Drawing.Size(127, 31)
-        Me.btnAddJewelry.TabIndex = 1
+        Me.btnAddJewelry.TabIndex = 5
         Me.btnAddJewelry.Text = "Save"
         Me.btnAddJewelry.UseVisualStyleBackColor = True
         '
@@ -126,7 +126,7 @@ Partial Class Image_Upload_Interface
         Me.Button4.Location = New System.Drawing.Point(460, 310)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(132, 31)
-        Me.Button4.TabIndex = 1
+        Me.Button4.TabIndex = 6
         Me.Button4.Text = "Cancel"
         Me.Button4.UseVisualStyleBackColor = True
         '
@@ -139,7 +139,7 @@ Partial Class Image_Upload_Interface
         Me.browse_Jewelry_image.Location = New System.Drawing.Point(12, 261)
         Me.browse_Jewelry_image.Name = "browse_Jewelry_image"
         Me.browse_Jewelry_image.Size = New System.Drawing.Size(216, 39)
-        Me.browse_Jewelry_image.TabIndex = 1
+        Me.browse_Jewelry_image.TabIndex = 7
         Me.browse_Jewelry_image.Text = "Browse Image"
         Me.browse_Jewelry_image.UseVisualStyleBackColor = True
         '
@@ -156,7 +156,7 @@ Partial Class Image_Upload_Interface
         '
         'StatusStrip1
         '
-        Me.StatusStrip1.BackColor = System.Drawing.Color.DimGray
+        Me.StatusStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 368)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(610, 22)
@@ -171,7 +171,7 @@ Partial Class Image_Upload_Interface
         Me.txtJewelryLocationID.Location = New System.Drawing.Point(334, 216)
         Me.txtJewelryLocationID.Name = "txtJewelryLocationID"
         Me.txtJewelryLocationID.Size = New System.Drawing.Size(258, 26)
-        Me.txtJewelryLocationID.TabIndex = 7
+        Me.txtJewelryLocationID.TabIndex = 4
         '
         'txtJewelryImagePath
         '

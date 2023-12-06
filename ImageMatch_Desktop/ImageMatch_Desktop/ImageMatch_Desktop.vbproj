@@ -70,6 +70,9 @@
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>..\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
@@ -280,6 +283,7 @@
   <ItemGroup>
     <None Include="Resources\loading.gif" />
     <None Include="Resources\loading24.gif" />
+    <Content Include="logo.ico" />
     <Content Include="x86\cudart32_65.dll" />
     <Content Include="x86\cufft32_65.dll" />
     <Content Include="x86\cvextern.dll" />

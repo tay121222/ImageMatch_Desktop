@@ -38,3 +38,12 @@
 \\wsl.localhost\Ubuntu-20.04\home\tay121222\ImageMatch_Desktop\ImageMatch_Desktop\ImageMatch_Desktop\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 \\wsl.localhost\Ubuntu-20.04\home\tay121222\ImageMatch_Desktop\ImageMatch_Desktop\ImageMatch_Desktop\obj\Debug\ImageMatch_Desktop.vbproj.AssemblyReference.cache
 \\wsl.localhost\Ubuntu-20.04\home\tay121222\ImageMatch_Desktop\ImageMatch_Desktop\ImageMatch_Desktop\obj\Debug\ImageMatch_Desktop.exe.config
+\\wsl.localhost\Ubuntu-20.04\home\tay121222\ImageMatch_Desktop\ImageMatch_Desktop\ImageMatch_Desktop\bin\Debug\Emgu.CV.dll
+\\wsl.localhost\Ubuntu-20.04\home\tay121222\ImageMatch_Desktop\ImageMatch_Desktop\ImageMatch_Desktop\bin\Debug\Emgu.CV.GPU.dll
+\\wsl.localhost\Ubuntu-20.04\home\tay121222\ImageMatch_Desktop\ImageMatch_Desktop\ImageMatch_Desktop\bin\Debug\Emgu.CV.ML.dll
+\\wsl.localhost\Ubuntu-20.04\home\tay121222\ImageMatch_Desktop\ImageMatch_Desktop\ImageMatch_Desktop\bin\Debug\Emgu.CV.OCR.dll
+\\wsl.localhost\Ubuntu-20.04\home\tay121222\ImageMatch_Desktop\ImageMatch_Desktop\ImageMatch_Desktop\bin\Debug\Emgu.CV.OpenCL.dll
+\\wsl.localhost\Ubuntu-20.04\home\tay121222\ImageMatch_Desktop\ImageMatch_Desktop\ImageMatch_Desktop\bin\Debug\Emgu.CV.Stitching.dll
+\\wsl.localhost\Ubuntu-20.04\home\tay121222\ImageMatch_Desktop\ImageMatch_Desktop\ImageMatch_Desktop\bin\Debug\Emgu.CV.UI.dll
+\\wsl.localhost\Ubuntu-20.04\home\tay121222\ImageMatch_Desktop\ImageMatch_Desktop\ImageMatch_Desktop\bin\Debug\Emgu.CV.VideoStab.dll
+\\wsl.localhost\Ubuntu-20.04\home\tay121222\ImageMatch_Desktop\ImageMatch_Desktop\ImageMatch_Desktop\bin\Debug\Emgu.Util.dll

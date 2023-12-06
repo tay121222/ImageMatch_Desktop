@@ -38,8 +38,8 @@ Partial Class Inventory_Management_Interface
         Me.Label2 = New System.Windows.Forms.Label()
         Me.pictureBoxJewelry = New System.Windows.Forms.PictureBox()
         Me.inv_cms = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UpdateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.pictureBoxJewelry, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.inv_cms.SuspendLayout()
         Me.SuspendLayout()
@@ -123,7 +123,7 @@ Partial Class Inventory_Management_Interface
         '
         'StatusStrip1
         '
-        Me.StatusStrip1.BackColor = System.Drawing.Color.DimGray
+        Me.StatusStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 384)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(987, 22)
@@ -142,7 +142,7 @@ Partial Class Inventory_Management_Interface
         '
         'pictureBoxJewelry
         '
-        Me.pictureBoxJewelry.BackColor = System.Drawing.Color.DimGray
+        Me.pictureBoxJewelry.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
         Me.pictureBoxJewelry.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pictureBoxJewelry.Location = New System.Drawing.Point(747, 80)
         Me.pictureBoxJewelry.Name = "pictureBoxJewelry"
@@ -157,17 +157,17 @@ Partial Class Inventory_Management_Interface
         Me.inv_cms.Name = "loc_cms"
         Me.inv_cms.Size = New System.Drawing.Size(113, 48)
         '
-        'DeleteToolStripMenuItem
-        '
-        Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
-        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(112, 22)
-        Me.DeleteToolStripMenuItem.Text = "Delete"
-        '
         'UpdateToolStripMenuItem
         '
         Me.UpdateToolStripMenuItem.Name = "UpdateToolStripMenuItem"
         Me.UpdateToolStripMenuItem.Size = New System.Drawing.Size(112, 22)
         Me.UpdateToolStripMenuItem.Text = "Update"
+        '
+        'DeleteToolStripMenuItem
+        '
+        Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(112, 22)
+        Me.DeleteToolStripMenuItem.Text = "Delete"
         '
         'Inventory_Management_Interface
         '
@@ -181,6 +181,9 @@ Partial Class Inventory_Management_Interface
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.listViewJewelry)
         Me.Controls.Add(Me.add_new_item_btn)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Inventory_Management_Interface"
         Me.ShowIcon = False
         Me.Text = "Inventory Management Interface"

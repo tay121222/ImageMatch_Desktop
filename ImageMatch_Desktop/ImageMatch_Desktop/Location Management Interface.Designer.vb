@@ -39,7 +39,7 @@ Partial Class Location_Management_Interface
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Tahoma", 10.0!)
-        Me.Label2.Location = New System.Drawing.Point(26, 66)
+        Me.Label2.Location = New System.Drawing.Point(11, 19)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(104, 17)
         Me.Label2.TabIndex = 11
@@ -48,14 +48,14 @@ Partial Class Location_Management_Interface
         'loc_name
         '
         Me.loc_name.Font = New System.Drawing.Font("Tahoma", 10.0!)
-        Me.loc_name.Location = New System.Drawing.Point(127, 63)
+        Me.loc_name.Location = New System.Drawing.Point(112, 16)
         Me.loc_name.Name = "loc_name"
         Me.loc_name.Size = New System.Drawing.Size(203, 24)
         Me.loc_name.TabIndex = 12
         '
         'StatusStrip1
         '
-        Me.StatusStrip1.BackColor = System.Drawing.Color.DimGray
+        Me.StatusStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 397)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(800, 22)
@@ -68,7 +68,7 @@ Partial Class Location_Management_Interface
         Me.add_new_location_btn.FlatAppearance.BorderSize = 2
         Me.add_new_location_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.add_new_location_btn.Font = New System.Drawing.Font("Tahoma", 10.0!)
-        Me.add_new_location_btn.Location = New System.Drawing.Point(142, 96)
+        Me.add_new_location_btn.Location = New System.Drawing.Point(321, 12)
         Me.add_new_location_btn.Name = "add_new_location_btn"
         Me.add_new_location_btn.Size = New System.Drawing.Size(69, 31)
         Me.add_new_location_btn.TabIndex = 14
@@ -81,9 +81,9 @@ Partial Class Location_Management_Interface
         Me.location_lv.Font = New System.Drawing.Font("Tahoma", 11.0!)
         Me.location_lv.FullRowSelect = True
         Me.location_lv.HideSelection = False
-        Me.location_lv.Location = New System.Drawing.Point(406, 60)
+        Me.location_lv.Location = New System.Drawing.Point(12, 60)
         Me.location_lv.Name = "location_lv"
-        Me.location_lv.Size = New System.Drawing.Size(382, 332)
+        Me.location_lv.Size = New System.Drawing.Size(776, 332)
         Me.location_lv.TabIndex = 16
         Me.location_lv.UseCompatibleStateImageBehavior = False
         Me.location_lv.View = System.Windows.Forms.View.Details
@@ -102,12 +102,12 @@ Partial Class Location_Management_Interface
         '
         Me.loc_cms.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DeleteToolStripMenuItem})
         Me.loc_cms.Name = "loc_cms"
-        Me.loc_cms.Size = New System.Drawing.Size(181, 48)
+        Me.loc_cms.Size = New System.Drawing.Size(108, 26)
         '
         'DeleteToolStripMenuItem
         '
         Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
-        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.DeleteToolStripMenuItem.Text = "Delete"
         '
         'Location_Management_Interface

@@ -23,7 +23,7 @@ Public Class Image_Matching
 
     Sub LoadJewelryImages()
         jewelryImages = DatabaseModule.GetResizedJewelryImages(newSize)
-        found_images.Text = "Found " & jewelryImages.Count & " Images"
+        found_images.Text = "Found " & jewelryImages.Count & " Images in DB"
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click

@@ -32,6 +32,16 @@ ImageMatch_Desktop
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:ImageMatch_Desktop.My.Resources.Resources.loading1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ImageMatch_Desktop.My.Resources.Resources.loading24">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:ImageMatch_Desktop.My.Resources.Resources.not_found">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
