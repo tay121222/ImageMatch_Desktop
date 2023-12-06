@@ -30,7 +30,7 @@ ImageMatch Desktop is a desktop application designed for jewelry inventory manag
 ### Prerequisites
 
 - [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework)
-- [MySQL Server Version 8](https://dev.mysql.com/downloads/mysql/)
+- [MySQL Server Version 8.0.35](https://dev.mysql.com/downloads/mysql/)
 
 ### Installation
 
