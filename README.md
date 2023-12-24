@@ -37,7 +37,7 @@ ImageMatch Desktop is a desktop application designed for jewelry inventory manag
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/ImageMatch-Desktop.git
+   git clone https://github.com/tay121222/ImageMatch-Desktop.git
    ```
 
 2. Open the solution in Visual Studio.
@@ -91,9 +91,12 @@ To set up the required database and tables for ImageMatch Desktop, follow these 
 1. **Create Database:**
 
    Execute the `create_database.sql` script to create the necessary database. Use your preferred MySQL client or run the script in the MySQL command line.
-
+    ```bash
+    -p imd_user_pwd
+   ```
+    
    ```bash
-   mysql -u your_username -p < create_database.sql
+   mysql -u imd_user -p < create_database.sql
    ```
 
    Enter your MySQL password when prompted.
@@ -104,7 +107,7 @@ To set up the required database and tables for ImageMatch Desktop, follow these 
    Execute the `location_data.sql` script to populate the `Locations` table with sample data.
 
    ```bash
-   mysql -u your_username -p ImageMatch_Desktop < location_data.sql
+   mysql -u imd_user -p ImageMatch_Desktop < location_data.sql
    ```
 
    Enter your MySQL password when prompted.
