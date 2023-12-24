@@ -26,12 +26,12 @@ Partial Class Image_Matching
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.image_browse = New System.Windows.Forms.Button()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.find_match_button = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.found_images = New System.Windows.Forms.Label()
+        Me.found_images_total_in_DB = New System.Windows.Forms.Label()
         Me.find_match_worker = New System.ComponentModel.BackgroundWorker()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.progress_loading_gif = New System.Windows.Forms.PictureBox()
         Me.match_found_list = New System.Windows.Forms.DataGridView()
         Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -42,7 +42,7 @@ Partial Class Image_Matching
         Me.jewelry_image = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.progress_loading_gif, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.match_found_list, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.jewelry_image, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -69,49 +69,49 @@ Partial Class Image_Matching
         Me.StatusStrip1.TabIndex = 5
         Me.StatusStrip1.Text = "StatusStrip1"
         '
-        'Button1
+        'find_match_button
         '
-        Me.Button1.BackColor = System.Drawing.Color.DarkGray
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.Button1.FlatAppearance.BorderSize = 2
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Tahoma", 10.0!)
-        Me.Button1.Location = New System.Drawing.Point(12, 304)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(216, 39)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "Find Match"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.find_match_button.BackColor = System.Drawing.Color.DarkGray
+        Me.find_match_button.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.find_match_button.FlatAppearance.BorderSize = 2
+        Me.find_match_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.find_match_button.Font = New System.Drawing.Font("Tahoma", 10.0!)
+        Me.find_match_button.Location = New System.Drawing.Point(12, 304)
+        Me.find_match_button.Name = "find_match_button"
+        Me.find_match_button.Size = New System.Drawing.Size(216, 39)
+        Me.find_match_button.TabIndex = 3
+        Me.find_match_button.Text = "Find Match"
+        Me.find_match_button.UseVisualStyleBackColor = False
         '
         'Panel1
         '
         Me.Panel1.AutoSize = True
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel1.Controls.Add(Me.found_images)
+        Me.Panel1.Controls.Add(Me.found_images_total_in_DB)
         Me.Panel1.Location = New System.Drawing.Point(12, 349)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(216, 76)
         Me.Panel1.TabIndex = 46
         '
-        'found_images
+        'found_images_total_in_DB
         '
-        Me.found_images.BackColor = System.Drawing.Color.AliceBlue
-        Me.found_images.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.found_images.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.found_images.ForeColor = System.Drawing.Color.DarkRed
-        Me.found_images.Location = New System.Drawing.Point(0, 0)
-        Me.found_images.Name = "found_images"
-        Me.found_images.Size = New System.Drawing.Size(212, 72)
-        Me.found_images.TabIndex = 0
-        Me.found_images.Text = "0000"
-        Me.found_images.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.found_images_total_in_DB.BackColor = System.Drawing.Color.AliceBlue
+        Me.found_images_total_in_DB.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.found_images_total_in_DB.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.found_images_total_in_DB.ForeColor = System.Drawing.Color.DarkRed
+        Me.found_images_total_in_DB.Location = New System.Drawing.Point(0, 0)
+        Me.found_images_total_in_DB.Name = "found_images_total_in_DB"
+        Me.found_images_total_in_DB.Size = New System.Drawing.Size(212, 72)
+        Me.found_images_total_in_DB.TabIndex = 0
+        Me.found_images_total_in_DB.Text = "0000"
+        Me.found_images_total_in_DB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'find_match_worker
         '
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.PictureBox4)
+        Me.GroupBox2.Controls.Add(Me.progress_loading_gif)
         Me.GroupBox2.Controls.Add(Me.match_found_list)
         Me.GroupBox2.Location = New System.Drawing.Point(244, 11)
         Me.GroupBox2.Name = "GroupBox2"
@@ -120,17 +120,17 @@ Partial Class Image_Matching
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Matches Found"
         '
-        'PictureBox4
+        'progress_loading_gif
         '
-        Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox4.Image = Global.ImageMatch_Desktop.My.Resources.Resources.loading24
-        Me.PictureBox4.Location = New System.Drawing.Point(379, 202)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(35, 33)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox4.TabIndex = 47
-        Me.PictureBox4.TabStop = False
-        Me.PictureBox4.Visible = False
+        Me.progress_loading_gif.BackColor = System.Drawing.Color.Transparent
+        Me.progress_loading_gif.Image = Global.ImageMatch_Desktop.My.Resources.Resources.loading24
+        Me.progress_loading_gif.Location = New System.Drawing.Point(379, 202)
+        Me.progress_loading_gif.Name = "progress_loading_gif"
+        Me.progress_loading_gif.Size = New System.Drawing.Size(35, 33)
+        Me.progress_loading_gif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.progress_loading_gif.TabIndex = 47
+        Me.progress_loading_gif.TabStop = False
+        Me.progress_loading_gif.Visible = False
         '
         'match_found_list
         '
@@ -214,7 +214,7 @@ Partial Class Image_Matching
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.StatusStrip1)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.find_match_button)
         Me.Controls.Add(Me.image_browse)
         Me.Controls.Add(Me.jewelry_image)
         Me.Name = "Image_Matching"
@@ -222,7 +222,7 @@ Partial Class Image_Matching
         Me.Text = "Image_Matching"
         Me.Panel1.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.progress_loading_gif, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.match_found_list, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.jewelry_image, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -233,12 +233,12 @@ Partial Class Image_Matching
     Friend WithEvents image_browse As Button
     Friend WithEvents jewelry_image As PictureBox
     Friend WithEvents StatusStrip1 As StatusStrip
-    Friend WithEvents Button1 As Button
+    Friend WithEvents find_match_button As Button
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents found_images As Label
+    Friend WithEvents found_images_total_in_DB As Label
     Friend WithEvents find_match_worker As System.ComponentModel.BackgroundWorker
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents progress_loading_gif As PictureBox
     Friend WithEvents match_found_list As DataGridView
     Friend WithEvents DataGridViewImageColumn1 As DataGridViewImageColumn
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn

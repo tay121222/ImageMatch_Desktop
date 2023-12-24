@@ -14,6 +14,7 @@ Public Class Image_Matching
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles image_browse.Click
+        'Browse image and select to find a match
         Dim openFileDialog As New OpenFileDialog()
         openFileDialog.Filter = "Image Files|*.bmp;*.jpg;*.jpeg;*.png;"
         If openFileDialog.ShowDialog() = DialogResult.OK Then
@@ -22,15 +23,17 @@ Public Class Image_Matching
     End Sub
 
     Sub LoadJewelryImages()
+        'load resized jewelry images and names from DB to keyvaluepair list. Emgu require that all images are resized to same dimension
         jewelryImages = DatabaseModule.GetResizedJewelryImages(newSize)
-        found_images.Text = "Found " & jewelryImages.Count & " Images in DB"
+        found_images_total_in_DB.Text = "Found " & jewelryImages.Count & " Images in DB"
     End Sub
 
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles find_match_button.Click
+        'Check if images in training set is enough to start the matching process
         If jewelryImages.Count < 10 Then
             MessageBox.Show("Currently don't have enough images in Training Set to achieve Image match Accuracy", "Add " & (10 - jewelryImages.Count) & " more Jewelry Items", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         Else
-            PictureBox4.Visible = True
+            progress_loading_gif.Visible = True
             find_match_worker.RunWorkerAsync()
         End If
 
@@ -105,13 +108,14 @@ Public Class Image_Matching
     'End Try
 #End Region
     Private Sub find_match_worker_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles find_match_worker.DoWork
-
+        ' Background worker to find match images
         image_to_find_match = New Image(Of Gray, Byte)(ResizeImage(New Bitmap(jewelry_image.Image)))
         Try
-
+            'Empty list of gray  byte and label
             Dim imagelist As List(Of Image(Of Gray, Byte)) = New List(Of Image(Of Gray, Byte))()
             Dim labellist As List(Of String) = New List(Of String)()
 
+            'load values into the empty list of gray byte and labels from jewelryImages keyvalue pair
             For Each pair As KeyValuePair(Of String, Byte()) In jewelryImages
                 Dim ImgStream As New IO.MemoryStream(CType(pair.Value, Byte()))
                 Dim tempimage As Bitmap = (New Bitmap(Image.FromStream(ImgStream)))
@@ -122,18 +126,24 @@ Public Class Image_Matching
                 ImgStream.Dispose()
             Next
 
+            'Initialize a new emgu recognizer and MCvTermCriteria (Parameter needed to find a match)
             Dim recognizer As EigenObjectRecognizer = Nothing
             Dim indicesToRemove As New List(Of Integer)()
             Dim TermCrit As MCvTermCriteria = New MCvTermCriteria(imagelist.Count, 0.001)
 
             While imagelist.Count > 1
 
+                'Assign images with their names(labels) to the recognizer
+                ' This is what Emgu will use as the training Set
+                ' A match is going to be found in this training set
                 recognizer = New EigenObjectRecognizer(imagelist.ToArray(), labellist.ToArray(), 1500, TermCrit)
 
+                ' Looping through each image in the training set to find a match
                 For i As Integer = 0 To imagelist.Count - 1
                     Dim recognitionValue As EigenObjectRecognizer.RecognitionResult = recognizer.Recognize(image_to_find_match)
                     Thread.Sleep(100)
 
+                    'If it finds a match it calculates the percentage of match
                     If recognitionValue.Label = labellist(i) Then
                         Dim foundimage As Image(Of Gray, Byte) = imagelist(recognitionValue.Index)
                         Dim difference As Image(Of Gray, Byte) = foundimage.AbsDiff(image_to_find_match)
@@ -153,6 +163,8 @@ Public Class Image_Matching
 
                         Dim percentageMatch2 As Double = DirectCast(e.Result, Double)
 
+                        'if the percentage is greater than 0, it means is a good match
+                        'Pulls other information of the image match found from the database with the label of the image found
                         If percentageMatch2 > 0 Then
                             Dim labelID As String = recognizer.Recognize(image_to_find_match).Label
                             Dim additionalInfoQuery As String = $"SELECT a.Name, a.Description, concat(a.LocationID,'(',b.LocationName,')') as location FROM JewelryItems a, Locations b WHERE ID = '{labelID}' and a.LocationID = b.LocationID"
@@ -170,6 +182,8 @@ Public Class Image_Matching
                     End If
                 Next
 
+                'After every match, the image is removed from the images list to prevent repeative matches
+                ' Then after the image has been removed, while loop executes again to build a new training set to find another match
                 For Each indexToRemove As Integer In indicesToRemove
                     imagelist.RemoveAt(indexToRemove)
                     labellist.RemoveAt(indexToRemove)
@@ -184,6 +198,6 @@ Public Class Image_Matching
     End Sub
 
     Private Sub find_match_worker_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles find_match_worker.RunWorkerCompleted
-        PictureBox4.Visible = False
+        progress_loading_gif.Visible = False
     End Sub
 End Class

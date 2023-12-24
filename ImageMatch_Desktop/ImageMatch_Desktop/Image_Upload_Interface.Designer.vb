@@ -30,7 +30,7 @@ Partial Class Image_Upload_Interface
         Me.txtJewelryType = New System.Windows.Forms.TextBox()
         Me.txtJewelryDescription = New System.Windows.Forms.TextBox()
         Me.btnAddJewelry = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.close_form_button = New System.Windows.Forms.Button()
         Me.browse_Jewelry_image = New System.Windows.Forms.Button()
         Me.jewelry_image = New System.Windows.Forms.PictureBox()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
@@ -117,18 +117,18 @@ Partial Class Image_Upload_Interface
         Me.btnAddJewelry.Text = "Save"
         Me.btnAddJewelry.UseVisualStyleBackColor = True
         '
-        'Button4
+        'close_form_button
         '
-        Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.Button4.FlatAppearance.BorderSize = 2
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Tahoma", 10.0!)
-        Me.Button4.Location = New System.Drawing.Point(460, 310)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(132, 31)
-        Me.Button4.TabIndex = 6
-        Me.Button4.Text = "Cancel"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.close_form_button.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.close_form_button.FlatAppearance.BorderSize = 2
+        Me.close_form_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.close_form_button.Font = New System.Drawing.Font("Tahoma", 10.0!)
+        Me.close_form_button.Location = New System.Drawing.Point(460, 310)
+        Me.close_form_button.Name = "close_form_button"
+        Me.close_form_button.Size = New System.Drawing.Size(132, 31)
+        Me.close_form_button.TabIndex = 6
+        Me.close_form_button.Text = "Cancel"
+        Me.close_form_button.UseVisualStyleBackColor = True
         '
         'browse_Jewelry_image
         '
@@ -197,7 +197,7 @@ Partial Class Image_Upload_Interface
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.close_form_button)
         Me.Controls.Add(Me.btnAddJewelry)
         Me.Controls.Add(Me.browse_Jewelry_image)
         Me.Controls.Add(Me.jewelry_image)
@@ -220,7 +220,7 @@ Partial Class Image_Upload_Interface
     Friend WithEvents txtJewelryType As TextBox
     Friend WithEvents txtJewelryDescription As TextBox
     Friend WithEvents btnAddJewelry As Button
-    Friend WithEvents Button4 As Button
+    Friend WithEvents close_form_button As Button
     Friend WithEvents jewelry_image As PictureBox
     Friend WithEvents browse_Jewelry_image As Button
     Friend WithEvents StatusStrip1 As StatusStrip

@@ -13,6 +13,8 @@ Public Class Image_Upload_Interface
     End Sub
 
     Sub save_jewelry()
+
+        'Code to save jewelry items to DB
         Dim name As String = txtJewelryName.Text
         Dim type As String = txtJewelryType.Text
         Dim getlocationID() As String = txtJewelryLocationID.Text.Split("(")
@@ -50,6 +52,8 @@ Public Class Image_Upload_Interface
     End Sub
 
     Sub update_jewelry()
+
+        'Code to update jewelry items to DB
         Dim id As Integer = Integer.Parse(Me.Text)
         Dim name As String = txtJewelryName.Text
         Dim type As String = txtJewelryType.Text
@@ -87,6 +91,7 @@ Public Class Image_Upload_Interface
         End If
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles browse_Jewelry_image.Click
+        'Browse and select image of current jewelry item adding
         Dim openFileDialog As New OpenFileDialog()
         openFileDialog.Filter = "Image Files|*.bmp;*.jpg;*.jpeg;*.png;"
         If openFileDialog.ShowDialog() = DialogResult.OK Then
@@ -96,10 +101,12 @@ Public Class Image_Upload_Interface
     End Sub
 
     Private Sub Image_Upload_Interface_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        LoadLocationIDs()
+        'Load location IDs
+        LoadLocationIDS()
     End Sub
 
     Public Sub LoadLocationIDS()
+        'Select location IDs from DB
         Dim query As String = "SELECT concat(LocationID,'(',LocationName,')') as location FROM Locations"
         Dim parameters As New List(Of MySqlParameter)()
         Try
@@ -121,7 +128,7 @@ Public Class Image_Upload_Interface
         End Try
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles close_form_button.Click
         Me.Close()
     End Sub
 End Class

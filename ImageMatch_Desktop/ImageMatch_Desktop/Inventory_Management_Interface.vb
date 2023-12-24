@@ -17,6 +17,7 @@ Public Class Inventory_Management_Interface
     End Sub
 
     Private Sub listViewJewelry_ItemSelectionChanged(sender As Object, e As ListViewItemSelectionChangedEventArgs) Handles listViewJewelry.ItemSelectionChanged
+        'Select Jewelry Item on the list to show image of select item in imagebox
         If e.IsSelected Then
             Dim imagePath As String = e.Item.SubItems(6).Text
             DisplayImage(imagePath)
@@ -24,6 +25,7 @@ Public Class Inventory_Management_Interface
     End Sub
 
     Private Sub DisplayImage(imagePath As String)
+        'Select Jewelry Item on the list to show image of select item in imagebox
         If Not String.IsNullOrEmpty(imagePath) Then
             Try
                 Using stream As New FileStream(imagePath, FileMode.Open, FileAccess.Read)
@@ -50,6 +52,7 @@ Public Class Inventory_Management_Interface
     End Sub
 
     Private Sub DeleteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteToolStripMenuItem.Click
+        'Code to delete
         Dim query As String = "DELETE FROM JewelryItems WHERE ID = @ID"
         Dim parameters As New List(Of MySqlParameter) From
         {
@@ -67,6 +70,7 @@ Public Class Inventory_Management_Interface
     End Sub
 
     Private Sub UpdateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UpdateToolStripMenuItem.Click
+        'Launch update form of Inventory items to update details
         Image_Upload_Interface.Close()
         Image_Upload_Interface.txtJewelryName.Text = listViewJewelry.FocusedItem.SubItems(1).Text
         Image_Upload_Interface.txtJewelryType.Text = listViewJewelry.FocusedItem.SubItems(2).Text
@@ -80,6 +84,7 @@ Public Class Inventory_Management_Interface
     End Sub
 
     Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
+        'Searhch Inventory items
         Dim searchTerm As String = txtSearch.Text.ToLower()
         For Each item As ListViewItem In listViewJewelry.Items
             Dim matchFound As Boolean = False

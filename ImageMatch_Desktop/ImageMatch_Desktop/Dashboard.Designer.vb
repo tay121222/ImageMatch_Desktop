@@ -25,14 +25,14 @@ Partial Class Dashboard
         Me.Invntory_button = New System.Windows.Forms.Button()
         Me.ImageMatch_button = New System.Windows.Forms.Button()
         Me.Location_button = New System.Windows.Forms.Button()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.location_image_placeholder = New System.Windows.Forms.PictureBox()
+        Me.match_image_placeholder = New System.Windows.Forms.PictureBox()
+        Me.inventory_image_placeholder = New System.Windows.Forms.PictureBox()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.location_image_placeholder, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.match_image_placeholder, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.inventory_image_placeholder, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -78,41 +78,41 @@ Partial Class Dashboard
         Me.Location_button.Text = "Location Management"
         Me.Location_button.UseVisualStyleBackColor = False
         '
-        'PictureBox3
+        'location_image_placeholder
         '
-        Me.PictureBox3.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.PictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox3.Image = Global.ImageMatch_Desktop.My.Resources.Resources.inventory_imagematch
-        Me.PictureBox3.Location = New System.Drawing.Point(493, 12)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(206, 199)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox3.TabIndex = 0
-        Me.PictureBox3.TabStop = False
+        Me.location_image_placeholder.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.location_image_placeholder.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.location_image_placeholder.Image = Global.ImageMatch_Desktop.My.Resources.Resources.inventory_imagematch
+        Me.location_image_placeholder.Location = New System.Drawing.Point(493, 12)
+        Me.location_image_placeholder.Name = "location_image_placeholder"
+        Me.location_image_placeholder.Size = New System.Drawing.Size(206, 199)
+        Me.location_image_placeholder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.location_image_placeholder.TabIndex = 0
+        Me.location_image_placeholder.TabStop = False
         '
-        'PictureBox2
+        'match_image_placeholder
         '
-        Me.PictureBox2.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox2.Image = Global.ImageMatch_Desktop.My.Resources.Resources.search_26236
-        Me.PictureBox2.Location = New System.Drawing.Point(253, 12)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(206, 199)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 0
-        Me.PictureBox2.TabStop = False
+        Me.match_image_placeholder.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.match_image_placeholder.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.match_image_placeholder.Image = Global.ImageMatch_Desktop.My.Resources.Resources.search_26236
+        Me.match_image_placeholder.Location = New System.Drawing.Point(253, 12)
+        Me.match_image_placeholder.Name = "match_image_placeholder"
+        Me.match_image_placeholder.Size = New System.Drawing.Size(206, 199)
+        Me.match_image_placeholder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.match_image_placeholder.TabIndex = 0
+        Me.match_image_placeholder.TabStop = False
         '
-        'PictureBox1
+        'inventory_image_placeholder
         '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox1.Image = Global.ImageMatch_Desktop.My.Resources.Resources._144_1445528_zoho_inventory_aftership_inventory_logo_png
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(206, 199)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
+        Me.inventory_image_placeholder.BackColor = System.Drawing.Color.Transparent
+        Me.inventory_image_placeholder.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.inventory_image_placeholder.Image = Global.ImageMatch_Desktop.My.Resources.Resources._144_1445528_zoho_inventory_aftership_inventory_logo_png
+        Me.inventory_image_placeholder.Location = New System.Drawing.Point(12, 12)
+        Me.inventory_image_placeholder.Name = "inventory_image_placeholder"
+        Me.inventory_image_placeholder.Size = New System.Drawing.Size(206, 199)
+        Me.inventory_image_placeholder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.inventory_image_placeholder.TabIndex = 0
+        Me.inventory_image_placeholder.TabStop = False
         '
         'StatusStrip1
         '
@@ -142,17 +142,17 @@ Partial Class Dashboard
         Me.Controls.Add(Me.Location_button)
         Me.Controls.Add(Me.ImageMatch_button)
         Me.Controls.Add(Me.Invntory_button)
-        Me.Controls.Add(Me.PictureBox3)
-        Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.location_image_placeholder)
+        Me.Controls.Add(Me.match_image_placeholder)
+        Me.Controls.Add(Me.inventory_image_placeholder)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Dashboard"
         Me.ShowIcon = False
         Me.Text = "Main Interface"
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.location_image_placeholder, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.match_image_placeholder, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.inventory_image_placeholder, System.ComponentModel.ISupportInitialize).EndInit()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
@@ -160,9 +160,9 @@ Partial Class Dashboard
 
     End Sub
 
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents inventory_image_placeholder As PictureBox
+    Friend WithEvents match_image_placeholder As PictureBox
+    Friend WithEvents location_image_placeholder As PictureBox
     Friend WithEvents Invntory_button As Button
     Friend WithEvents ImageMatch_button As Button
     Friend WithEvents Location_button As Button
