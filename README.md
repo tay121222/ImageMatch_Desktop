@@ -50,6 +50,9 @@ ImageMatch Desktop is a desktop application designed for jewelry inventory manag
 
 The main interface presents three primary buttons for image upload, image match, and inventory management. Each button leads to a specific module within the application.
 
+![dashboard](https://github.com/tay121222/ImageMatch_Desktop/assets/6275272/1e00eeb6-7ca6-45b8-a4ed-455f16ab27ac)
+
+
 ### Image Matching
 
 1. **Upload Images:** Navigate to the "Image Upload" section to add images of jewelry items.
@@ -58,11 +61,16 @@ The main interface presents three primary buttons for image upload, image match,
 
 3. **View Matches:** Explore the matched items, including images, labels (IDs), and matching percentages.
 
+![Image_Matching_Interface](https://github.com/tay121222/ImageMatch_Desktop/assets/6275272/f4102a74-22ea-4151-ab86-c74b8737cd3a)
+
+
 ### Inventory Management
 
 1. **Add Items:** In the "Inventory" section, add new jewelry items by providing details such as name, type, description, and location.
 
 2. **Manage Inventory:** View and manage the existing inventory, edit item details, or remove items as needed.
+
+![inventory_management_interface](https://github.com/tay121222/ImageMatch_Desktop/assets/6275272/48a61d83-f5ba-45c4-a432-e172c40972a6)
 
 ### Location Management
 
@@ -72,6 +80,9 @@ For managing locations in ImageMatch Desktop:
 - Here, you can add, edit, or delete locations where jewelry items are stored.
 - Use the "Add Location" button to insert new locations.
 - To remove a location, select it and right-click to Delete Location.
+
+![location_management_interface](https://github.com/tay121222/ImageMatch_Desktop/assets/6275272/de0bd0d6-52b8-43fb-93ff-f4d08d407f7d)
+
 
 ### Database Setup
 
@@ -87,7 +98,8 @@ To set up the required database and tables for ImageMatch Desktop, follow these 
 
    Enter your MySQL password when prompted.
 
-2. **Load Location Data:**
+
+3. **Load Location Data:**
 
    Execute the `location_data.sql` script to populate the `Locations` table with sample data.
 
@@ -98,6 +110,9 @@ To set up the required database and tables for ImageMatch Desktop, follow these 
    Enter your MySQL password when prompted.
 
    This script inserts location data into the `Locations` table, providing sample locations for your jewelry items.
+   
+![ImageMatch Desktop Data Model](https://github.com/tay121222/ImageMatch_Desktop/assets/6275272/e0eb5ab2-cac0-4fcd-b714-3cd42e22bf29)
+
 
 
 ## Configuration
@@ -110,6 +125,8 @@ Adjust configuration settings such as database connection strings in the `app.co
   <add name="MyConnectionString" connectionString="Server=localhost;Database=ImageMatch_Desktop;User Id=user;Password=pass;" providerName="MySql.Data.MySqlClient" />
 </connectionStrings>
 ```
+
+
 
 ## License
 
